@@ -1,2 +1,18 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<header class="site-header">
+	<h1 class="site-title">{{ .Site.Title }}</h1>
+
+	{{ with .Site.Params.subtitle }}
+		<div class="site-description">
+			{{ range . }}
+				<p>{{ . }}</p>
+			{{ end }}
+		</div>
+	{{ end }}
+
+	<nav class="site-nav" aria-label="Main navigation">
+		<a href="{{ "/" | relURL }}">[home]</a>
+		<a href="{{ "/posts/" | relURL }}">[posts]</a>
+		<a href="{{ "/tags/" | relURL }}">[tags]</a>
+		<a href="{{ "/index.xml" | relURL }}">[rss]</a>
+	</nav>
+</header>

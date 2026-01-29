@@ -50,7 +50,7 @@
 html, body {
 	background: #000;
 	color: #e6e6e6;
-	font-family: "IBM Plex Sans", system-ui, sans-serif;
+	font-family: "IBM Plex Mono", system-ui, sans-serif;
 	line-height: 1.5;
 	margin: 0;
 }
@@ -58,7 +58,6 @@ html, body {
 body {
 	position: relative;
 	z-index: 0;
-
 	max-width: 768px;
 	margin: 1.25rem auto;
 }
@@ -69,20 +68,15 @@ body::before {
 	inset: 0;
 	pointer-events: none;
 	z-index: 9999;
-
 	background-image: url("/img/noise.png");
 	background-repeat: repeat;
-
 	opacity: 0.1;
 }
 
-header {
-	border-bottom: 1px solid rgba(230, 230, 230, 0.18);
-	margin-bottom: 1rem;
-}
+header {}
 
 footer {
-	border-top: 1px solid rgba(230, 230, 230, 0.18);
+	border-bottom: 2px dotted rgba(230, 230, 230, 0.3);
 	margin-top: 1rem;
 }
 
@@ -93,6 +87,38 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+.site-header {
+	border-bottom: 2px dotted rgba(230, 230, 230, 0.3);
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+}
+
+.site-title {
+	margin: 0 0 0.5rem 0;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.site-description p {
+	margin: 0.15rem 0;
+	font-style: italic;
+	opacity: 0.85;
+}
+
+.site-nav {
+	margin-top: 0.75rem;
+	font-size: 0.9rem;
+}
+
+.site-nav a {
+	margin-right: 0.75rem;
+	opacity: 0.8;
+}
+
+.site-nav a:hover {
+	opacity: 1;
 }
 
 .post-teaser {
@@ -114,13 +140,10 @@ a:hover {
 
 .post-title {
 	margin: 0;
-	font-family: "IBM Plex Mono", monospace;
-
 	display: grid;
 	grid-template-columns: 2.5ch 1fr;
 	column-gap: 0.25ch;
 	align-items: baseline;
-
 	min-width: 0;
 }
 
