@@ -7,7 +7,15 @@
 
 	{{ range (where site.RegularPages "Section" "posts").ByDate.Reverse }}
 		<section class="post-teaser">
-			<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+			<div class="post-header">
+				<h2 class="post-title">
+					<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+				</h2>
+
+				<time class="post-date" datetime="{{ .Date.Format "2006-01-02Z07:00" }}">
+					{{ .Date.Format "2006/01/02" }}
+				</time>
+			</div>
 
 			{{ if and .RawContent .Description }}
 				<p>{{ .Description }}</p>
