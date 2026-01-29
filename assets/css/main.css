@@ -129,6 +129,9 @@ a:hover {
 	margin-bottom: 3em;
 }
 
+.post-teaser::hover {
+}
+
 .post-header {
 	grid-column: 1 / -1;
 	display: flex;
@@ -156,10 +159,24 @@ a:hover {
 	min-width: 0;
 }
 
+.post-title a:hover {
+	color: #000;
+	text-decoration: none;
+	background: #ff0000;
+}
+
+.post-teaser:hover .post-title::before {
+	opacity: 0.8;
+}
+
 .post-date {
 	font-size: 0.8rem;
 	opacity: 0.6;
 	white-space: nowrap;
+}
+
+.post-teaser:hover .post-date {
+	opacity: 0.8;
 }
 
 .post-desc {
