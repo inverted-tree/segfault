@@ -220,6 +220,60 @@ a:hover {
     line-height: 1.5;
 }
 
+.terms {
+    margin: 2rem 1rem;
+}
+
+.terms-label {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 0.4rem;
+}
+
+.terms-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.terms-item {
+    margin: 0 2px;
+}
+
+.terms-link {
+    position: relative;
+    display: inline-block;
+    padding: 0.15em 0.55em;
+    line-height: 1.2;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    color: rgba(230, 230, 230, 0.6);
+    text-decoration: none;
+    border: 1px solid rgba(230, 230, 230, 0.6);
+}
+
+.terms-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/img/noise.png");
+    background-repeat: repeat;
+    opacity: 0.8;
+    mix-blend-mode: hard-light;
+    pointer-events: none;
+    animation: noiseJitter 1s steps(1) infinite;
+}
+
+.terms-link:hover,
+.terms-link:focus-visible {
+    color: #ff0f0f;
+    text-decoration: none;
+    border: 1px solid #ff0f0f;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .post-title a:hover::after {
         animation: none;
