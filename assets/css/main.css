@@ -51,7 +51,7 @@ a:hover {
 }
 
 .site-header {
-    border-bottom: 2px dotted rgba(230, 230, 230, 0.3);
+    border-bottom: 1px solid rgba(230, 230, 230, 0.3);
     padding-bottom: 2rem;
     margin-bottom: 2rem;
 }
