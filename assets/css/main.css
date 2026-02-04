@@ -73,16 +73,13 @@ body::before {
     opacity: 0.1;
 }
 
-header {
-}
-
 footer {
     border-bottom: 2px dotted rgba(230, 230, 230, 0.3);
     margin-top: 1rem;
 }
 
 a {
-    color: #ff0000;
+    color: #ff0f0f;
     text-decoration: none;
 }
 
@@ -130,9 +127,6 @@ a:hover {
     margin-bottom: 3em;
 }
 
-.post-teaser::hover {
-}
-
 .post-header {
     grid-column: 1 / -1;
     display: flex;
@@ -165,7 +159,7 @@ a:hover {
 
 .post-title a:hover {
     color: #000;
-    background: #ff0000;
+    background: #ff0f0f;
     text-decoration: none;
 }
 
