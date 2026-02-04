@@ -1,36 +1,4 @@
 @font-face {
-    font-family: "IBM Plex Sans";
-    src: url("/fonts/IBMPlexSans-Light.woff2") format("woff2");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IBM Plex Sans";
-    src: url("/fonts/IBMPlexSans-LightItalic.woff2") format("woff2");
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IBM Plex Sans";
-    src: url("/fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IBM Plex Sans";
-    src: url("/fonts/IBMPlexSans-SemiBoldItalic.woff2") format("woff2");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "IBM Plex Mono";
     src: url("/fonts/IBMPlexMono-Regular.woff2") format("woff2");
     font-weight: 400;
@@ -73,44 +41,6 @@ body::before {
     opacity: 0.1;
 }
 
-.site-footer {
-    padding: 2rem;
-    background: #000;
-    color: #aaa;
-    border-top: 1px solid #222;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.footer-text {
-    line-height: 1.5;
-    max-width: 65ch; /* keeps text readable */
-}
-
-.footer-text p {
-    margin: 0 0 0.5rem 0;
-}
-
-.footer-text p:last-child {
-    margin-bottom: 0;
-}
-
-.footer-qr {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.footer-qr img {
-    width: 72px; /* tweak to taste */
-    height: auto;
-    shape-rendering: crispEdges;
-}
-
 a {
     color: #ff0f0f;
     text-decoration: none;
@@ -150,6 +80,44 @@ a:hover {
 
 .site-nav a:hover {
     opacity: 1;
+}
+
+.site-footer {
+    padding: 2rem;
+    background: #000;
+    color: #aaa;
+    border-top: 1px solid #222;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer-text {
+    line-height: 1.5;
+    max-width: 65ch;
+}
+
+.footer-text p {
+    margin: 0 0 0.5rem 0;
+}
+
+.footer-text p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-qr {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-qr img {
+    width: 72px;
+    height: auto;
+    shape-rendering: crispEdges;
 }
 
 .post-teaser {
@@ -208,55 +176,6 @@ a:hover {
     animation: noiseJitter 1s steps(1) infinite;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .post-title a:hover::after {
-        animation: none;
-    }
-}
-
-@keyframes noiseJitter {
-    0% {
-        background-position: 0px 0px;
-    }
-    10% {
-        background-position: -23px 17px;
-    }
-    20% {
-        background-position: 31px -11px;
-    }
-    30% {
-        background-position: -47px -29px;
-    }
-    40% {
-        background-position: 13px 41px;
-    }
-    50% {
-        background-position: -19px -37px;
-    }
-    60% {
-        background-position: 53px 19px;
-    }
-    70% {
-        background-position: -41px 29px;
-    }
-    80% {
-        background-position: 29px -43px;
-    }
-    90% {
-        background-position: -31px 11px;
-    }
-    100% {
-        background-position: 0px 0px;
-    }
-}
-
-/*.post-title a:hover::after {
-    /*content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}*/
-
 .post-teaser:hover .post-title::before {
     opacity: 0.8;
 }
@@ -299,4 +218,46 @@ a:hover {
     white-space: pre-wrap;
     font-size: 0.9rem;
     line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .post-title a:hover::after {
+        animation: none;
+    }
+}
+
+@keyframes noiseJitter {
+    0% {
+        background-position: 0px 0px;
+    }
+    10% {
+        background-position: -23px 17px;
+    }
+    20% {
+        background-position: 31px -11px;
+    }
+    30% {
+        background-position: -47px -29px;
+    }
+    40% {
+        background-position: 13px 41px;
+    }
+    50% {
+        background-position: -19px -37px;
+    }
+    60% {
+        background-position: 53px 19px;
+    }
+    70% {
+        background-position: -41px 29px;
+    }
+    80% {
+        background-position: 29px -43px;
+    }
+    90% {
+        background-position: -31px 11px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
 }
