@@ -6,5 +6,9 @@
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
   {{ .Content }}
+
+  <p class="back-home">
+      <a href="{{ "/" | relURL }}">&larr; go back home</a>
+  </p>
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
