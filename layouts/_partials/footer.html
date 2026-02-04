@@ -1,1 +1,30 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-text">
+            {{ with .Site.Params.Footer }}
+            <p>{{ . }}</p>
+            {{ end }} {{ $start := .Site.Params.launchYear }} {{ $now :=
+            now.Year }}
+
+            <p>
+                © {{ if $start }} {{ if lt $start $now }}{{ $start }}–{{ $now
+                }}{{ else }}{{ $now }}{{ end }} {{ else }} {{ $now }} {{ end }}
+                {{ .Site.Copyright }} {{ with .Site.Params.License }} –&nbsp;<a
+                    href="{{ . | relURL }}"
+                    >LICENSE</a
+                >
+                {{ end }}
+            </p>
+        </div>
+
+        {{ with .Site.Params.qrCode }}
+          <div class="footer-qr">
+            <img
+              src="{{ . | relURL }}"
+              alt="QR code missing"
+              title="{{ site.Params.qrText | default "" }}"
+            />
+          </div>
+        {{ end }}
+    </div>
+</footer>

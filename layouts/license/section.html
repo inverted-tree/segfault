@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main class="content">
+
+    <p class="back-home">
+      <a href="{{ "/" | relURL }}">&larr; go back home</a>
+    </p>
+  <h1>{{ .Title }}</h1>
+
+  {{ with site.Params.license }}
+    {{ with resources.Get . }}
+      <pre class="license-text">{{ .Content }}</pre>
+    {{ else }}
+      <p>License file not found.</p>
+    {{ end }}
+  {{ else }}
+    {{ .Content }}
+  {{ end }}
+</main>
+{{ end }}
