@@ -3,7 +3,9 @@
         <div class="footer-text">
             {{ with .Site.Params.Footer }}
             <p>{{ . }}</p>
-            {{ end }} {{ $start := .Site.Params.launchYear }} {{ $now :=
+            {{ end }}
+            <a href="https://disable-javascript.org/">Remember to turn off JS in your browser.</a>
+            {{ $start := .Site.Params.launchYear }} {{ $now :=
             now.Year }}
 
             <p>
