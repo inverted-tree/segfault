@@ -64,7 +64,7 @@ The theme includes a dedicated license page that can render the contents of a li
 2. Configure the path in hugo.toml:
 ```toml
 [params]
-license = "./LICENSE"
+license = "./license"
 ```
 
 **Note:** The license file will be rendered verbatim on the `/license/` page. 
