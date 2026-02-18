@@ -8,13 +8,13 @@
     </head>
     <body>
         <header>
-            {{ if not .Params.noHeader }} {{ partial "header.html" . }} {{ end
-            }}
+            {{ if and (ne .Kind "404") (not .Params.noHeader) }} {{ partial
+            "header.html" . }} {{ end }}
         </header>
         <main>{{ block "main" . }}{{ end }}</main>
         <footer>
-            {{ if not .Params.noFooter }} {{ partial "footer.html" . }} {{ end
-            }}
+            {{ if and (ne .Kind "404") (not .Params.noFooter) }} {{ partial
+            "footer.html" . }} {{ end }}
         </footer>
     </body>
 </html>
